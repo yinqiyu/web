@@ -1,0 +1,61 @@
+@charset "utf-8";
+body{
+	background-image: url(<%=request.getContextPath()%>/images/bg2.png);
+	font-size: 14px;
+}
+
+#logininForm{
+	width: 300px;
+	height: 230px;
+	background-color: beige;
+	margin: 200px auto;
+	padding-top: 30px;
+	border: 1px solid #CCCCCC;
+	border-radius: 1em;
+}
+
+#logininForm p{
+	text-indent: 45px;
+}
+
+#userName,
+#password,
+#vcode{
+	height: 30px;
+	border: 1px solid #CCCCCC;
+	text-indent: 24px;
+}
+
+#userName{
+	width: 280px;
+	background-repeat: no-repeat;
+	background-position: 2px center;
+}
+
+#password{
+	width: 280px;
+	background-repeat: no-repeat;
+	background-position: 2px center;
+}
+
+#vcode{
+	width: 280px;
+	background-repeat: no-repeat;
+	background-position: 2px center;
+}
+
+#vcodeImg{
+	cursor: pointer;
+	border: 0;
+	height: 30px;
+	vertical-align: middle;
+}
+
+#btLogin{
+	width: 280px;
+	height: 35px;
+	background-color: rgb(19, 19, 206);
+	color: #FFFFFF;
+	font-weight: bold;
+	
+}
