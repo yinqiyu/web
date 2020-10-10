@@ -27,7 +27,7 @@ DownloadDao.java：封装对下载资源的数据库操作
 
 
 
-##  .sql
+##  excise.sql
 
 /*
  Navicat Premium Data Transfer
