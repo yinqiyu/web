@@ -14,6 +14,35 @@
   <url-pattern>/pictureCheckCode</url-pattern>
  </servlet-mapping>
 
+<!--过滤所有网页 未登录无权限-->
+<filter>
+		<filter-name>permissionCheckFilter</filter-name>
+		<filter-class>filter.PermissionFilter</filter-class>
+		<init-param>
+			<param-name>notCheckUri</param-name>
+	<param-value>/creatVerifyImage.do,/login.do,/logout.do,/error.jsp,/main.jsp</param-value>
+		</init-param>
+</filter>
+<filter-mapping>
+		<filter-name>permissionCheckFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+		<url-pattern>*.do</url-pattern>
+</filter-mapping>
+
+<!--用户权限 
+<filter>
+	<filter-name>permissionCheckFilter1</filter-name>
+	<filter-class>filter.AdminFilter</filter-class>
+	<init-param>
+			<param-name>notCheckUri1</param-name>
+	<param-value>/creatVerifyImage.do,/login.do,/logout.do,/error.jsp,/download.jsp,/user.jsp</param-value>
+		</init-param>
+</filter>
+<filter-mapping>
+		<filter-name>permissionCheckFilter2</filter-name>
+		<url-pattern>/userManage.jsp,/resourceManage.jsp</url-pattern>
+</filter-mapping>
+过滤管理员界面-->
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>

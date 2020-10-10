@@ -54,14 +54,15 @@
 	
    		<div id="userinfo">     
    		<span>欢迎你： ${chrName} </span>
-   		<a href="servlet/LogoutController">【安全退出】</a>
+   		<a href="logout.do">【安全退出】</a>
    	    </div>
    	  
 	<ul class="menu">
-		<li><a href="#">首页</a></li>
-		<li><a href=download.jsp>下载</a></li>
-		<li><a href="#">增加</a></li>
-		<li><a href="#">查询</a></li>
+		<li><a href="main.jsp">首页</a></li>
+		<li><a href=download.jsp>资源下载</a></li>
+		<li><a href="resourceManage.jsp">资源管理</a></li>
+		<li><a href="userManage.jsp">用户管理</a></li>
+		<li><a href="user.jsp">个人中心</a></li>
 		<li><a href="SocialMediaButtons.html">关于</a></li>
 	</ul>
 </body>

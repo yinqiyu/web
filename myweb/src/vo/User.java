@@ -5,14 +5,14 @@ public class User {
 	private String userName;
 	private String password;
 	private static String chrName;
-	private String role;
 	
 	
-	public User(String userName, String password, String chrName, String role) {
+	
+	public User(String userName, String password, String chrName) {
 		this.userName = userName;
 		this.password = password;
 		this.chrName = chrName;
-		this.role = role;
+		
 	}
 	public String getUserName() {
 		return userName;
@@ -32,13 +32,8 @@ public class User {
 	public void setChrName(String chrName) {
 		this.chrName = chrName;
 	}
-	public String getRole() {
-		return role;
-	}
-	public void setRole(String role) {
-		this.role = role;
-	}
-	
-	
-	
+
 }
+	
+	
+	

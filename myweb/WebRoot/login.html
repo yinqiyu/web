@@ -103,9 +103,10 @@
 			<input class = "txtb" name="password" type="password" placeholder="密码"/></p>
 			<p>
 				<input class = "txtb" name = "vcode" type="text" placeholder="验证码"/>
-				<img id = "vcodeImg" src="creatVerifyImage.do" onclick="changeImg();" title="看不清,换一个"/>			
+				<img id = "vcodeImg" src="creatVerifyImage.do" onclick="changeImg();" title="看不清,换一个"/>	
+				<td><input type="checkbox" value="yes" name="y">一周内免登陆</td>
 			</p>
-			<input class ="login-btn" type="submit" value="登&nbsp;&nbsp;录 " />			
+			<input class ="login-btn" id="tj" type="submit" value="登&nbsp;&nbsp;录 " />			
 		</form>
 	</div>
 	<script type="text/javascript">
@@ -136,7 +137,26 @@
 		})
 		hideBtn[0].addEventListener('click', function() {
 			toggleClass(loginBox[0], 'showed')
-		})
+		})	
+	</script>
+	
+	<script src="functions.js">
+		if(getCookie("pas")&&getCookie("name")){ //判断页面是否有对应Cookie
+		    dx.value=getCookie("name");             //有则写入
+		    pas.value=getCookie("pas");
+		}else{
+		    dx.value="";                            //无则写空
+		    pas.value="";
+		}
+		tj.function(){
+		    if(mdl.checked){                       //判断多选框是否选中
+		        setCookie("name",dx.value,7);       //如选中则添加Cookie，添加内容为用户输入的密码和用户名
+		        setCookie("pas",pas.value,7);
+		    }else{
+		        removeCookie("name");   //如没选中，则删除掉对应的Cookie
+		        removeCookie("pas");
+		    }
+		}
 	</script>
 		
 </body>

@@ -44,13 +44,13 @@ public class LoginController extends HttpServlet {
 	    		request.setAttribute("info", "您输入的用户名不存在！");
 	    		forwardpath = "/error.jsp";
 	    	}else {//用户名存在
-	    		User currentUser = userDao.get(password);
+	    		User currentUser = userDao.get(username);
 	    		if(currentUser == null) {//密码不对
 		    		request.setAttribute("info", "您输入的密码不正确！");
 		    		forwardpath = "/error.jsp";
 	    		}else {
 	    			
-	    			session.setAttribute("currentUer",currentUser);
+	    			session.setAttribute("currentUser",currentUser);
 	    			forwardpath = "/main.jsp";
 	    			session.setAttribute("chrName",User.getChrName());
 	    		}

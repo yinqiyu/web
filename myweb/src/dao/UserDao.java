@@ -13,7 +13,7 @@ public class UserDao {
 			//code加载驱动
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			//建立连接
-			Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/excise?userSSL=false&serverTimezone=UTC&character=utf-8", "root", "root");;
+			Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/excise?useSSL=false&serverTimezone=UTC&character=utf-8", "root", "root");;
 			System.out .println("连上了");
 			//创建语句
 			String sql = "select * from t_user where userName=?";
@@ -29,7 +29,7 @@ public class UserDao {
 			if(rs.next()) {
 				user = new User(rs.getString("userName"),
 						rs.getString("password"),
-						rs.getString("chrName"),rs.getString("role"));
+						rs.getString("chrName"));
 				System.out .println("结果处理成功");
 			}
 			System.out .println(user.getUserName());
