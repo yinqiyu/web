@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -29,6 +30,7 @@ public class LoginController extends HttpServlet {
 		String password = request.getParameter("password");
 		String chrName = request.getParameter("chrName");
 		String vcode = request.getParameter("vcode");
+		String auto = request.getParameter("auto"); //是否自动登录
 		//获取session对象
 	    HttpSession session = request.getSession();
 	    
@@ -48,11 +50,22 @@ public class LoginController extends HttpServlet {
 	    		if(currentUser == null) {//密码不对
 		    		request.setAttribute("info", "您输入的密码不正确！");
 		    		forwardpath = "/error.jsp";
-	    		}else {
-	    			
+	    		}else {		
 	    			session.setAttribute("currentUser",currentUser);
-	    			forwardpath = "/main.jsp";
 	    			session.setAttribute("chrName",User.getChrName());
+	    			forwardpath = "/main.jsp";
+	    			if(auto==null) {//未勾选自动登录
+	                    Cookie cookie = new Cookie("auto", null);
+	                    cookie.setMaxAge(60*60*24);//cookie有效时间
+	                    cookie.setPath(request.getContextPath()+"/");
+	                    response.addCookie(cookie);
+	                }else {//勾选自动登录
+	                    Cookie cookie = new Cookie("auto", username+"_"+password);
+	                    cookie.setMaxAge(60*60*24);//cookie有效时间
+	                    cookie.setPath(request.getContextPath()+"/");
+	                    response.addCookie(cookie);
+	                }
+	    			
 	    		}
 	    	}
 	    }

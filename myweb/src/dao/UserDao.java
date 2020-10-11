@@ -3,10 +3,12 @@ import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
 
 import vo.User;
 
 public class UserDao {
+	public static ArrayList<User> list =new ArrayList<User>();
 	public User get(String userName) {
 		User user = null;
 		try{
