@@ -22,9 +22,9 @@
 
   n 点击登录按钮后，以post方式将请求发送给控制器login.do
 
-  ![image-20201025175014522](Untitled 1/image-20201025175014522.png)
+  ![image-20201025175014522](https://github.com/yinqiyu/web/blob/main/Untitled%201/image-20201025175014522.png)
 
-  ![image-20201025175030144](Untitled 1/image-20201025175030144.png)
+  ![image-20201025175030144](https://github.com/yinqiyu/web/blob/main/Untitled%201//image-20201025175030144.png)
 
   2.在第一次作业的基础上，增加以下功能：
 
@@ -40,7 +40,7 @@
 
   修改main.jsp主页面的导航菜单
 
-  ![image-20201025175110300](Untitled 1/image-20201025175110300.png)
+  ![image-20201025175110300](https://github.com/yinqiyu/web/blob/main/Untitled%201/image-20201025175110300.png)
 
   3.在作业2的基础上，做以下的修改：
 
@@ -50,7 +50,7 @@
 
   在用户名，密码，验证码文本框的blur事件中判断内容是否输入，在下面给出相应的提示。
 
-  ![image-20201025175201675](Untitled 1/image-20201025175201675.png)
+  ![image-20201025175201675](https://github.com/yinqiyu/web/blob/main/Untitled%201/image-20201025175201675.png)
 
   （2）登录验证改为ajax方式
 
@@ -60,5 +60,5 @@
 
   点击“免费注册”，进入register.html页面
 
-  ![image-20201025175149043](Untitled 1/image-20201025175149043.png)
+  ![image-20201025175149043](https://github.com/yinqiyu/web/blob/main/Untitled%201/image-20201025175149043.png)
 
