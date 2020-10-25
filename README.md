@@ -1,10 +1,10 @@
 
 # 最新项目为myweb2
-## 最后一次更新 2020/10/25
 
-- 项目要求
 
-  1. **视图**
+## - 项目要求
+
+###  1. **视图**
 
   （1）用户登录界面
 
@@ -26,7 +26,7 @@ n 点击登录按钮后，以post方式将请求发送给控制器login.do
 
   ![image-20201025175014522](https://github.com/yinqiyu/web/blob/main/Untitled%201/image-20201025175014522.png)
   
-  （2）错误提示页面
+###  （2）错误提示页面
 
 使用动态页面，文件名为error.jsp，相对固定不变的内容使用html标签，从服务器servlet返回的动态错误描述信息使用EL（表达式语言）显示。错误信息下方显示“*秒后自动返回到登录页面”，
 
@@ -34,7 +34,7 @@ n 点击登录按钮后，以post方式将请求发送给控制器login.do
 
   ![image-20201025175030144](https://github.com/yinqiyu/web/blob/main/Untitled%201//image-20201025175030144.png)
   
- (3）主页面
+ ### (3）主页面
 
 使用动态页面，文件名为main.jsp
 
@@ -52,8 +52,14 @@ n 用户打开浏览器，直接输入主页面地址，如http://127.0.0.1/exci
 
 n 点击下载，以超链接方式将请求发送至控制器getDownloadList.do
 
+###  （4）下载页面
 
-  2.在第一次作业的基础上，增加以下功能：
+使用动态页面，文件名为download.jsp，
+
+以列表方式显示所有可下载的资源名称，图形，大小，时间，星级，描述，点击按钮后将请求提交给控制器download.do进行处理，资源id可以作为请求参数，将文件下载到本地
+   ![image-20201025175014522](https://github.com/yinqiyu/web/blob/main/Untitled%201/A3668768-7576-4D91-AA4D-A42484FA293C.png)
+
+##  2.在第一次作业的基础上，增加以下功能：
 
   （1）实现一周以内免登录功能
 
@@ -68,12 +74,7 @@ n 点击下载，以超链接方式将请求发送至控制器getDownloadList.do
   修改main.jsp主页面的导航菜单
 
   ![image-20201025175110300](https://github.com/yinqiyu/web/blob/main/Untitled%201/image-20201025175110300.png)
-  （4）下载页面
 
-使用动态页面，文件名为download.jsp，
-
-以列表方式显示所有可下载的资源名称，图形，大小，时间，星级，描述，点击按钮后将请求提交给控制器download.do进行处理，资源id可以作为请求参数，将文件下载到本地
-   ![image-20201025175014522](https://github.com/yinqiyu/web/blob/main/Untitled%201/A3668768-7576-4D91-AA4D-A42484FA293C.png)
 
   3.在作业2的基础上，做以下的修改：
 
