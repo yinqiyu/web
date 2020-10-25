@@ -25,6 +25,7 @@
   ![image-20201025175014522](https://github.com/yinqiyu/web/blob/main/Untitled%201/image-20201025175014522.png)
 
   ![image-20201025175030144](https://github.com/yinqiyu/web/blob/main/Untitled%201//image-20201025175030144.png)
+ ![image-20201025175014522](https://github.com/yinqiyu/web/blob/main/Untitled%201/A3668768-7576-4D91-AA4D-A42484FA293C.png)
 
   2.在第一次作业的基础上，增加以下功能：
 
