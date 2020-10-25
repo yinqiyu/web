@@ -66,6 +66,11 @@ n 点击下载，以超链接方式将请求发送至控制器getDownloadList.do
   修改main.jsp主页面的导航菜单
 
   ![image-20201025175110300](https://github.com/yinqiyu/web/blob/main/Untitled%201/image-20201025175110300.png)
+  （4）下载页面
+
+使用动态页面，文件名为download.jsp，
+
+以列表方式显示所有可下载的资源名称，图形，大小，时间，星级，描述，点击按钮后将请求提交给控制器download.do进行处理，资源id可以作为请求参数，将文件下载到本地
    ![image-20201025175014522](https://github.com/yinqiyu/web/blob/main/Untitled%201/A3668768-7576-4D91-AA4D-A42484FA293C.png)
 
   3.在作业2的基础上，做以下的修改：
