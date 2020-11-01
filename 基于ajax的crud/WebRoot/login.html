@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link href="css/login.css" rel="stylesheet" />
+	<script src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script> 
+	
+	
+	<script >
+	function changeImg(){
+		document.getElementById("vcodeImg").src = "creatVerifyImage.do?t=" + Math.random();
+		}
+	</script>
+	<title>用户登录</title>	
+	
+</head>
+
+<body>
+	<div class="show-login-btn">
+		-> Show Login Form
+	</div>
+	<div class="login-box">
+		<div class="hide-login-btn">
+			+
+		</div>
+		<form action="login.do" method="post" class="login-form">
+		
+			<input class = "txtb" id="userName" name="userName" type="text" placeholder="用户名"/>
+			<span style=" color: red;" id="userNameError"></span>
+			
+			<input class = "txtb" id="password" name="password" type="password" placeholder="密码"/>
+			<span style=" color: red;" id="passwordError"></span>
+			
+				<p>
+				<input class = "txtb" id="vcode" name = "vcode" type="text" placeholder="验证码"/>
+				<img id = "vcodeImg" src="creatVerifyImage.do" onclick="changeImg();" title="看不清,换一个"/>	
+				
+				<p style="margin: 0;"><span id="vcodeError" style="margin-left: 123px; font-size: 12px; color: red;"></span>
+				</p>
+				
+				<p>
+				<input type="checkbox" id="autoLogin" name="checkbox" value="yes" /> <label>一周内免登录</label>
+				
+				<a href="register.html" style="text-decoration: none; color: -webkit-link;"  >免费注册</a>
+				</p>				
+			
+			<input class ="login-btn" id="submit" type="submit" onclick = "jqAjaxChecLojin()" value="登&nbsp;&nbsp;录 " />
+			<p style="margin: 0;"><span id="checkError" style=" color: red; margin-left: 123px; font-size: 12px;"></span>			
+		</form>
+	</div>
+	
+	
+	
+	<script type="text/javascript">
+		function hasClass(element, clssname) {
+			return element.className.match(new RegExp('(\\s|^)' + clssname + '(\\s|$)'))
+		}
+		function addClass(element, clssname) {
+			if (!this.hasClass(element, clssname)) element.className += ' ' + clssname
+		}
+		function removeClass(element, clssname) {
+			if (hasClass(element, clssname)) {
+				var reg = new RegExp('(\\s|^)' + clssname + '(\\s|$)')
+				element.className = element.className.replace(reg, ' ')
+			}
+		}
+		function toggleClass(element, clssname) {
+			if (hasClass(element, clssname)) {
+				removeClass(element, clssname)
+			} else {
+				addClass(element, clssname)
+			}
+		}
+		var loginBox = document.getElementsByClassName('login-box')
+		var showBtn = document.getElementsByClassName('show-login-btn')
+		var hideBtn = document.getElementsByClassName('hide-login-btn')
+		showBtn[0].addEventListener('click', function() {
+			toggleClass(loginBox[0], 'showed')
+		})
+		hideBtn[0].addEventListener('click', function() {
+			toggleClass(loginBox[0], 'showed')
+		})	
+	</script>
+	
+	
+		
+</body>
+</html>

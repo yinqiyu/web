@@ -1,0 +1,40 @@
+.css_table tr:hover{
+    background-color: grey;
+}
+
+.serchForm{
+    float: left;
+}
+.bt{
+    float:right;
+
+
+}
+table tr:nth-child(odd) {
+    background-color:#F5F5F5;
+  }
+table tr:nth-child(even) {
+    background-color:#fff;
+}
+
+.register{
+    float:right;
+}
+
+
+
+.my_link_button {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background: #FFFAFA;
+    margin-top: 20px;
+    font-size: 8px;
+    text-decoration:none;
+    text-align: center;
+    line-height: 28px;
+    color:#999999;
+}
+ 
+
+
